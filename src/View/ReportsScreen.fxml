@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="1007.0" prefWidth="1565.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReportsController">
+   <children>
+      <Button fx:id="exitButton" layoutX="1493.0" layoutY="949.0" mnemonicParsing="false" onAction="#changeSceneToHomeScreen" text="Exit" />
+      <TableView fx:id="reportsTB" layoutX="14.0" layoutY="84.0" prefHeight="600.0" prefWidth="1547.0">
+        <columns>
+          <TableColumn fx:id="appointmentsIdColumn" prefWidth="32.333312034606934" text="Id" />
+          <TableColumn fx:id="appointmentTitleColumn" prefWidth="118.33337020874023" text="Title" />
+            <TableColumn fx:id="appointmentDescriptionColumn" prefWidth="171.3333282470703" text="Description" />
+            <TableColumn fx:id="appointmentLocationColumn" prefWidth="202.0" text="Location" />
+            <TableColumn fx:id="appointmentTypeColumn" prefWidth="315.3333740234375" text="Type" />
+            <TableColumn fx:id="appointmentStartTimeColumn" prefWidth="281.33331298828125" text="Start" />
+            <TableColumn fx:id="appointmentEndTimeColumn" prefWidth="242.666748046875" text="End" />
+            <TableColumn fx:id="appointmentCustomerIdColumn" prefWidth="82.0" text="Customer" />
+            <TableColumn fx:id="appointmentUserIdColumn" prefWidth="40.6666259765625" text="User" />
+            <TableColumn fx:id="appointmentContactIdColumn" prefWidth="69.3333740234375" text="Contact" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="416.0" layoutY="27.0" prefHeight="57.0" prefWidth="733.0" text="Reports">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <HBox layoutX="46.0" layoutY="760.0" prefHeight="100.0" prefWidth="1250.0" spacing="60.0">
+         <children>
+            <Button fx:id="filterByMonth" mnemonicParsing="false" onAction="#viewApptsMonthType" prefHeight="0.0" prefWidth="205.0" text="Show Appointments for This Month" />
+            <Button fx:id="filterByContact" mnemonicParsing="false" onAction="#viewApptsByContact" text="Filter Appointments by Contact" />
+            <Button fx:id="filterChrono" mnemonicParsing="false" onAction="#viewApptsByStart" text="Show Appointments Chronologically" />
+         </children>
+      </HBox>
+      <ComboBox fx:id="contactCB" layoutX="326.0" layoutY="726.0" prefWidth="150.0" promptText="Contact" />
+   </children>
+</AnchorPane>

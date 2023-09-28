@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane prefHeight="810.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.NewCustomerController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="13.0" prefHeight="60.0" prefWidth="552.0" text="New Customer">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <VBox layoutX="216.0" layoutY="107.0" prefHeight="614.0" prefWidth="230.0" spacing="40.0">
+         <children>
+            <TextField fx:id="nameTF" prefHeight="0.0" prefWidth="230.0" promptText="Name" />
+            <TextField fx:id="addressTF" promptText="Address" />
+            <TextField fx:id="postalCodeTF" promptText="Postal Code" />
+            <TextField fx:id="phoneNumberTF" promptText="Phone Number" />
+            <ComboBox fx:id="countryCB" prefHeight="25.0" prefWidth="234.0" promptText="Country" />
+            <ComboBox fx:id="firstLevelDivisonCB" prefHeight="25.0" prefWidth="234.0" promptText="First Level Division" />
+         </children>
+      </VBox>
+      <Button fx:id="saveButton" layoutX="29.0" layoutY="721.0" mnemonicParsing="false" onAction="#saveNewCustomer" text="Save" />
+      <Button fx:id="exitButton" layoutX="607.0" layoutY="721.0" mnemonicParsing="false" onAction="#changeSceneToCustomersScreen" text="Exit" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="697.0" prefWidth="1092.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AppointmentsController">
+   <children>
+      <TableView fx:id="appointmentsTableView" layoutX="47.0" layoutY="79.0" prefHeight="442.0" prefWidth="997.0">
+        <columns>
+            <TableColumn fx:id="appointmentsIdColumn" prefWidth="22.33333969116211" text="Id" />
+          <TableColumn fx:id="appointmentTitleColumn" prefWidth="128.3333511352539" text="Title" />
+            <TableColumn fx:id="appointmentDescriptionColumn" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="appointmentLocationColumn" prefWidth="147.33331298828125" text="Location" />
+            <TableColumn fx:id="appointmentTypeColumn" prefWidth="146.66671752929688" text="Type" />
+            <TableColumn fx:id="appointmentStartTimeColumn" prefWidth="130.66668701171875" text="Start Time" />
+            <TableColumn fx:id="appointmentEndTimeColumn" minWidth="0.0" prefWidth="148.33331298828125" text="End Time" />
+            <TableColumn fx:id="appointmentCustomerIdColumn" minWidth="0.0" prefWidth="81.333251953125" text="Customer Id" />
+            <TableColumn fx:id="appointmentUserIdColumn" minWidth="1.33331298828125" prefWidth="47.0" text="User Id" />
+            <TableColumn fx:id="appointmentContactIdColumn" minWidth="8.0" prefWidth="71.66656494140625" text="Contact Id" />
+        </columns>
+      </TableView>
+      <Button fx:id="exitButton" layoutX="45.0" layoutY="643.0" mnemonicParsing="false" onAction="#changeSceneToLoginScreen" text="Exit" />
+      <Label alignment="CENTER" layoutX="375.0" layoutY="14.0" prefHeight="49.0" prefWidth="341.0" text="Appointments">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Button fx:id="customersButton" layoutX="993.0" layoutY="554.0" mnemonicParsing="false" onAction="#changeSceneToCustomers" text="Customers" />
+      <Button fx:id="reportsButton" layoutX="993.0" layoutY="603.0" mnemonicParsing="false" onAction="#changeSceneToReports" prefHeight="25.0" prefWidth="73.0" text="Reports" />
+      <Button fx:id="newAppointmentButton" layoutX="63.0" layoutY="529.0" mnemonicParsing="false" onAction="#changeSceneToNewAppointment" text="New Appointment" />
+      <Button fx:id="editAppointmentButton" layoutX="206.0" layoutY="529.0" mnemonicParsing="false" onAction="#changeSceneToEditAppointment" text="Edit Appointment" />
+      <Button fx:id="deleteButton" layoutX="349.0" layoutY="529.0" mnemonicParsing="false" onAction="#deleteSelectedAppointment" text="Delete" />
+      <VBox layoutX="966.0" layoutY="18.0" prefHeight="63.0" prefWidth="100.0" spacing="3.0">
+         <children>
+            <RadioButton fx:id="weekRB" mnemonicParsing="false" onAction="#viewApptsByWeek" text="Sort By Week" />
+            <RadioButton fx:id="monthRB" mnemonicParsing="false" onAction="#viewApptsMonth" text="Sort By Month" />
+            <RadioButton fx:id="viewAllRB" mnemonicParsing="false" onAction="#viewAllAppts" text="View All" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

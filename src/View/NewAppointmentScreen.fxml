@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="810.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.NewAppointmentController">
+   <children>
+      <Label layoutX="177.0" layoutY="13.0" prefHeight="44.0" prefWidth="299.0" text="New Appointment">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="exitButton" layoutX="619.0" layoutY="740.0" mnemonicParsing="false" onAction="#changeSceneToHomeScreen" text="Exit" />
+      <VBox layoutX="67.0" layoutY="154.0" prefHeight="530.0" prefWidth="196.0" spacing="40.0">
+         <children>
+            <TextField fx:id="titleTF" prefHeight="25.0" prefWidth="110.0" promptText="Title" />
+            <TextField fx:id="descriptionTF" promptText="Description" />
+            <TextField fx:id="locationTF" promptText="Location" />
+            <TextField fx:id="typeTF" promptText="Type" />
+            <ComboBox fx:id="startTimeCB" prefHeight="25.0" prefWidth="200.0" promptText="Start Time" />
+            <ComboBox fx:id="endTimeCB" prefHeight="25.0" prefWidth="199.0" promptText="End Time" />
+            <DatePicker fx:id="datePicker" prefHeight="25.0" prefWidth="200.0" promptText="Date" />
+         </children>
+      </VBox>
+      <VBox layoutX="327.0" layoutY="154.0" prefHeight="530.0" prefWidth="196.0" spacing="40.0">
+         <children>
+            <Label fx:id="customerLabel" text="Customer" />
+            <ComboBox fx:id="customerCB" prefHeight="25.0" prefWidth="200.0" promptText="Customer" />
+            <Label fx:id="contactLabel" text="Contact" />
+            <ComboBox fx:id="contactCB" prefHeight="25.0" prefWidth="230.0" promptText="Contact" />
+            <Label fx:id="userLabel" text="User" />
+            <ComboBox fx:id="userIdCB" prefHeight="25.0" prefWidth="200.0" promptText="User ID" />
+         </children>
+      </VBox>
+      <Button fx:id="saveButton" layoutX="41.0" layoutY="740.0" mnemonicParsing="false" onAction="#saveNewAppt" text="Save" />
+   </children>
+</AnchorPane>

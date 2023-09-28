@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="635.0" prefWidth="963.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+      <VBox layoutX="303.0" layoutY="184.0" prefHeight="341.0" prefWidth="334.0" spacing="20.0">
+         <children>
+            <TextField fx:id="userNameTextField" promptText="User Name" />
+            <TextField fx:id="passwordTextField" promptText="Password" />
+            <HBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="334.0">
+               <children>
+                  <Button fx:id="loginButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#loginButtonAction" text="Login" textFill="#3e4ca3" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label fx:id="userZoneLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="306.0" layoutY="110.0" prefHeight="25.0" prefWidth="334.0" text="Label" textAlignment="CENTER" />
+      <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="320.0" layoutY="6.0" prefHeight="67.0" prefWidth="310.0" text="Scheduling  Application">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
